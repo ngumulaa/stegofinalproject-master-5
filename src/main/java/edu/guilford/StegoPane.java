@@ -47,6 +47,17 @@ public class StegoPane extends Pane {
     private Button send;
     private Label sendLabel;
     private Rectangle2D screenBounds;
+
+    // add a question label to the pane
+    private Label questionLabel;
+
+    // add a button labeled stego image 
+    private Button stegoImage;
+
+    // add a decrypt button to the pane
+    private Button decrypt;
+
+
     
     //Constructor for the StegoPane class
     public StegoPane() {
@@ -123,6 +134,27 @@ public class StegoPane extends Pane {
         send = new Button("Send");
         //Change the font size of the button
         send.setStyle("-fx-font-size: 15px; -fx-font-type: Arial");
+
+        // add a question label to the pane
+        questionLabel = new Label("Would you like to decrypt a embedded image?");
+        //Change the size and font of the label
+        questionLabel.setStyle("-fx-font-size: 18px; -fx-font-type: Arial");
+        // set the location of the question label to the bottom of the pane and the middle
+        questionLabel.relocate((screenBounds.getWidth() / 2.8), (screenBounds.getHeight() / 1.3));
+
+        // add a button labeled stego image to the pane 
+        stegoImage = new Button("Stego Image");
+        //Change the font size of the button
+        stegoImage.setStyle("-fx-font-size: 15px; -fx-font-type: Arial");
+        // set the location of the stego image button to the bottom of the pane and the left
+        stegoImage.relocate((screenBounds.getWidth() / 2.8), (screenBounds.getHeight() / 1.2));
+        // add a button labeled decrypt to the pane
+        decrypt = new Button("Decrypt");
+        //Change the font size of the button
+        decrypt.setStyle("-fx-font-size: 15px; -fx-font-type: Arial");
+        // set the location of the decrypt button to the bottom of the pane and the right
+        decrypt.relocate((screenBounds.getWidth() / 1.8), (screenBounds.getHeight() / 1.2));
+
         
         //Set the location of the beginningLabel to the top center of the pane
         beginningLabel.relocate((screenBounds.getWidth() / 2.8), 0);
@@ -247,6 +279,6 @@ public class StegoPane extends Pane {
         //     }
         // });
 
-        this.getChildren().addAll(beginningLabel, messageLabel, messageText, imageText, imageText2, newImage, prevImage, imageView, encrypt, encryptLabel, send, directionsLabel);
+        this.getChildren().addAll(beginningLabel, messageLabel, messageText, imageText, imageText2, newImage, prevImage, imageView, encrypt, encryptLabel, send, directionsLabel, questionLabel, stegoImage, decrypt);
     }
 }
