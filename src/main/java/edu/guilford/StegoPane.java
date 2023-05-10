@@ -18,6 +18,11 @@ import javafx.stage.Screen;
 //This class will be the pane that holds the method for the user
 //to input the message they want to encrypt and the image they want
 //to encrypt it in
+
+/** 
+ * the StegoPane class represents a custom JavaFX pane that provides a user interface for the Steganography App
+ * It allows the user to encrypt a message and embed it in an image of their choice
+ */
 public class StegoPane extends Pane {
     
     //add an beginning label to the pane
@@ -57,8 +62,11 @@ public class StegoPane extends Pane {
     // add a decrypt button to the pane
     private Button decrypt;
 
+    /** 
+     * constructs a StegoPane object
+     * Initializes and sets up all the UI components 
+     */
 
-    
     //Constructor for the StegoPane class
     public StegoPane() {
 
